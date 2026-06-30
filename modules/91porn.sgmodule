@@ -1,0 +1,14 @@
+#!name=91Porn 短视频
+#!desc=91Porn PWA: VIP解锁,付费视频解锁,去广告++
+#!author=Yu9191
+#!category=18+
+#!arguments=日志级别:error
+#!arguments-desc=日志级别: error(默认,静默只报错) / off / warn / info / debug / all
+
+[Script]
+91porn API = type=http-response, pattern=^https?:\/\/[^/]+\/pwa\.php, requires-body=1, max-size=-1, timeout=30, script-path=https://raw.githubusercontent.com/Yu9191/91sp/refs/heads/main/dist/91porn.js, argument=logLevel={{{日志级别}}}
+
+[MITM]
+# 91Porn 业务接口统一打到 <随机子域>.<轮换顶级域>/pwa.php，主机会随机轮换。
+# 接口换主机时把新主机/新顶级域加进来即可（MITM 不区分端口）。
+hostname = %APPEND% *.yxrznglgy.cc

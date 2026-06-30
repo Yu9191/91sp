@@ -1,0 +1,13 @@
+#!name = 91Porn 短视频
+#!desc = 91Porn PWA: VIP解锁,付费视频解锁,去广告++
+#!author = Yu9191
+#!category = 18+
+
+[Argument]
+logLevel = select, "error", "off", "warn", "info", "debug", "all", tag=日志级别, desc=选择日志输出级别 (默认 error)
+
+[Script]
+http-response ^https?:\/\/[^/]+\/pwa\.php script-path=https://raw.githubusercontent.com/Yu9191/91sp/refs/heads/main/dist/91porn.js, requires-body=true, timeout=30, tag=91porn, argument="logLevel={{{logLevel}}}"
+
+[MITM]
+hostname = *.yxrznglgy.cc
