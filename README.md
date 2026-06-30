@@ -87,18 +87,7 @@ API 主机随机轮换（随机子域名 + 轮换顶级域）。Worker 会抓 PW
 <details>
 <summary><b>持久化键</b></summary>
 
-**Worker KV**（命名空间绑定名 `KV`）
-
-| 键 | 说明 |
-| --- | --- |
-| `main_account` | 主号信息：account/password/token/oauthId/isVip/vipLevel/invitedNum/coins/vipExpireAt/updatedAt |
-| `farm_records` | 养出的小号记录（account/password/createdAt），最多保留 200 条 |
-| `api_hosts` | 自动发现的最新 API 域名数组 |
-| `api_hosts_updated_at` | 域名最后更新时间戳 |
-| `pwa_base` | PWA 入口地址（域名发现起点） |
-| `api_host` / `api_origin` / `api_ua` | 手动 `/sethost` 兜底用的单域名 / Origin / UA |
-
-**脚本侧（BoxJS / 持久化存储）**
+脚本侧（BoxJS / 持久化存储）
 
 | 键 | 说明 |
 | --- | --- |
