@@ -1,9 +1,9 @@
 #!name=91Porn 短视频
-#!desc=91Porn PWA: VIP解锁,付费视频解锁,去广告++
+#!desc=91Porn PWA: VIP解锁,付费视频解锁(VIP token注入),去广告++
 #!author=Yu9191
 
 [Script]
-91porn = type=http-response, pattern=^https?:\/\/[^/]+\/pwa\.php, requires-body=1, script-path=https://raw.githubusercontent.com/Yu9191/91sp/refs/heads/main/dist/91porn.js
+91porn = type=http-request, pattern=^https?:\/\/[^/]+\/pwa\.php, requires-body=1, timeout=30, script-path=https://raw.githubusercontent.com/Yu9191/91sp/refs/heads/main/dist/91porn.js
 
 [MITM]
 hostname = *.yxrznglgy.cc
