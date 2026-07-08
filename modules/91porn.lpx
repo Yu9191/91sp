@@ -1,5 +1,5 @@
 #!name = 91Porn 短视频
-#!desc = 91Porn PWA: VIP解锁,付费视频解锁(VIP token注入),去广告++
+#!desc = 91Porn PWA: 完整视频(10play→long) + 付费/VIP解锁 + 去广告，默认常开无开关
 #!author = Yu9191
 #!category = 18+
 
@@ -10,4 +10,4 @@ logLevel = select, "error", "off", "warn", "info", "debug", "all", tag=日志级
 http-request ^https?:\/\/[^/]+\/pwa\.php script-path=https://raw.githubusercontent.com/Yu9191/91sp/refs/heads/main/dist/91porn.js, requires-body=true, timeout=30, tag=91porn, argument="logLevel={{{logLevel}}}"
 
 [MITM]
-hostname = *.yxrznglgy.cc
+hostname = *.yxrznglgy.cc, *.nkbvfuvu.cc
