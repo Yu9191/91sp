@@ -12,7 +12,7 @@ encode = select, "default", "yes", "no", tag=URL编码, desc=跳转链接是否 
 jump = select, "no", "yes", tag=播放器跳转, desc=打开视频详情时弹通知跳转外部播放器 (默认 no)
 
 [Script]
-http-request ^https?:\/\/[^/]+\/pwa\.php script-path=https://raw.githubusercontent.com/Yu9191/91sp/refs/heads/main/dist/91porn.js, requires-body=true, timeout=30, tag=91porn, argument="logLevel={{{logLevel}}}&player={{{player}}}&scheme={{{scheme}}}&encode={{{encode}}}&jump={{{jump}}}"
+http-request ^https?:\/\/[^/]+\/pwa\.php script-path=https://raw.githubusercontent.com/Yu9191/91sp/refs/heads/main/dist/91porn.js, requires-body=true, timeout=30, tag=91porn, argument=[{logLevel},{player},{scheme},{encode},{jump}]
 
 [MITM]
 hostname = *.yxrznglgy.cc, *.nkbvfuvu.cc
