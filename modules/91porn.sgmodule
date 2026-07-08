@@ -1,5 +1,6 @@
 #!name=91Porn 短视频
 #!desc=91Porn PWA: 完整视频(10play→long) + 付费/VIP解锁 + 去广告，默认常开无开关
+#!icon=https://raw.githubusercontent.com/Yu9191/91sp/refs/heads/main/modules/91porn.png
 #!author=Yu9191
 #!category=18+
 #!arguments=日志级别:error,播放器:lenna,自定义scheme:none,URL编码:default,播放器跳转:no
