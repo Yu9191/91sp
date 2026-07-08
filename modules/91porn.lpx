@@ -1,13 +1,13 @@
 #!name = 91Porn 短视频
-#!desc = 91Porn PWA: 完整视频(10play→long) + 付费/VIP解锁 + 去广告，默认常开无开关
+#!desc = 91Porn PWA: 完整视频 + 付费/VIP解锁 + 去广告，默认常开无开关
 #!icon = https://raw.githubusercontent.com/Yu9191/91sp/refs/heads/main/modules/91porn.png
 #!author = Yu9191
 #!category = 18+
 
 [Argument]
 logLevel = select, "error", "off", "warn", "info", "debug", "all", tag=日志级别, desc=选择日志输出级别 (默认 error)
-player = select, "lenna", "SenPlayer", "SenPlayer-dl", "Infuse", "Fileball", "VidHub", "IINA", "Alook", "VLC", "KMPlayer", "NPlayer", "Safari", "custom", tag=播放器, desc=选内置播放器；选 custom 用下方自定义scheme
-scheme = input, none, tag=自定义scheme, desc=选 custom 时填写完整 URL scheme；留 none 不启用
+player = select, "lenna", "SenPlayer", "SenPlayer-dl", "Infuse", "Fileball", "VidHub", "IINA", "Alook", "VLC", "KMPlayer", "NPlayer", "Safari", "自定义", tag=播放器, desc=选内置播放器；选「自定义」用下方自定义scheme
+scheme = input, none, tag=自定义scheme, desc=选「自定义」时填写完整 URL scheme；留 none 不启用
 encode = select, "default", "yes", "no", tag=URL编码, desc=跳转链接是否 URL 编码
 jump = select, "no", "yes", tag=播放器跳转, desc=打开视频详情时弹通知跳转外部播放器 (默认 no)
 
