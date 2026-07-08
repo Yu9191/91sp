@@ -5,9 +5,13 @@
 
 [Argument]
 logLevel = select, "error", "off", "warn", "info", "debug", "all", tag=日志级别, desc=选择日志输出级别 (默认 error)
+player = input, lenna, tag=播放器, desc=外部播放器 (lenna/SenPlayer/Infuse/Fileball/VidHub/IINA/Alook/VLC/NPlayer/Safari)
+scheme = input, none, tag=自定义scheme, desc=填写后覆盖播放器；留 none 不启用
+encode = select, "default", "yes", "no", tag=URL编码, desc=跳转链接是否 URL 编码
+jump = select, "no", "yes", tag=播放器跳转, desc=打开视频详情时弹通知跳转外部播放器 (默认 no)
 
 [Script]
-http-request ^https?:\/\/[^/]+\/pwa\.php script-path=https://raw.githubusercontent.com/Yu9191/91sp/refs/heads/main/dist/91porn.js, requires-body=true, timeout=30, tag=91porn, argument="logLevel={{{logLevel}}}"
+http-request ^https?:\/\/[^/]+\/pwa\.php script-path=https://raw.githubusercontent.com/Yu9191/91sp/refs/heads/main/dist/91porn.js, requires-body=true, timeout=30, tag=91porn, argument="logLevel={{{logLevel}}}&player={{{player}}}&scheme={{{scheme}}}&encode={{{encode}}}&jump={{{jump}}}"
 
 [MITM]
 hostname = *.yxrznglgy.cc, *.nkbvfuvu.cc
